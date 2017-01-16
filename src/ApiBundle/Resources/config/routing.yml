@@ -1,3 +1,48 @@
-api_homepage:
+api_request_list:
     path:     /
-    defaults: { _controller: ApiBundle:Default:index }
+    defaults: { _controller: ApiBundle:Request:list, _format: ~ }
+    requirements:
+            _method: GET
+
+api_request_get:
+    path:  /requests/{id}
+    defaults: { _controller: ApiBundle:Request:get, _format: ~ }
+    requirements:
+            _method: GET
+
+api_request_new:
+    pattern:  /requests
+    defaults: { _controller: ApiBundle:Request:new, _format: ~ }
+    requirements:
+        _method: POST
+
+api_request_edit:
+    pattern:  /requests/{id}
+    defaults: { _controller: ApiBundle:Request:edit, _format: ~ }
+    requirements:
+        _method: PUT
+
+api_request_delete:
+    pattern:  /requests/{id}
+    defaults: { _controller: ApiBundle:Request:remove, _format: ~ }
+    requirements:
+        _method: DELETE
+
+api_request_patch:
+    pattern:  /requests/{id}
+    defaults: { _controller: ApiBundle:Request:patch, _format: ~ }
+    requirements:
+        _method: PATCH
+
+api_request_getInfo:
+    path:  /requests/getInfo/
+    defaults: { _controller: ApiBundle:Request:getInfo, _format: ~ }
+    requirements:
+            _method: GET, POST
+
+
+api_request_store:
+    path:  /requests/storeRequest/{route}
+    defaults: { _controller: ApiBundle:Request:store, _format: ~ }
+    requirements:
+            _method: GET, POST
