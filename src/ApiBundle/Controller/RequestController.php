@@ -129,14 +129,14 @@ class RequestController extends Controller
             return View::create(array('errors' => $errors), 400);
         }
 
-        $user->save();
+        $requestModel->save();
 
         $response = new Response();
         $response->setStatusCode(204);
         $response->headers->set('Location',
             $this->generateUrl(
-                'acme_demo_user_get', array('id' => $user->getId()),
-                true // absolute
+                'api_request_get', array('id' => $requestModel->getId()),
+                true
             )
         );
 
