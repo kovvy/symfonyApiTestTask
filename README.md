@@ -20,7 +20,6 @@ Base rout of application: /{requests}/{method}
 In response you will recieve json with status message:
 
 ```
-#!javascript
 
 {
     "success":"true",
@@ -41,7 +40,7 @@ In response you will recieve json with status message:
 
 If the request was not found returns a 404 error.
 
-#!javascript
+```
 
 {
     "success":"true",
@@ -64,7 +63,7 @@ Parameters: search, method.
 
 If the request was not found returns a 404 error.
 
-#!javascript
+```
 
 {
     "success":"true",
@@ -86,7 +85,7 @@ If the request was not found returns a 404 error.
 
 If the request was not found returns a 404 error.
 
-#!javascript
+```
 
 {
     'success' => 'false',
@@ -96,7 +95,7 @@ If the request was not found returns a 404 error.
 
 ELSE
 
-#!javascript
+```
 
 {
     'success' => 'true',
