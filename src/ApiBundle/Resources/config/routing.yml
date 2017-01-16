@@ -11,25 +11,25 @@ api_request_get:
             _method: GET
 
 api_request_new:
-    pattern:  /requests
+    path:  /requests
     defaults: { _controller: ApiBundle:Request:new, _format: ~ }
     requirements:
         _method: POST
 
 api_request_edit:
-    pattern:  /requests/{id}
+    path:  /requests/{id}
     defaults: { _controller: ApiBundle:Request:edit, _format: ~ }
     requirements:
         _method: PUT
 
 api_request_delete:
-    pattern:  /requests/{id}
+    path:  /requests/{id}
     defaults: { _controller: ApiBundle:Request:remove, _format: ~ }
     requirements:
         _method: DELETE
 
 api_request_patch:
-    pattern:  /requests/{id}
+    path:  /requests/{id}
     defaults: { _controller: ApiBundle:Request:patch, _format: ~ }
     requirements:
         _method: PATCH

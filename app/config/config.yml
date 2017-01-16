@@ -35,6 +35,8 @@ framework:
     php_errors:
         log: true
 
+nelmio_api_doc: ~
+
 # Twig Configuration
 twig:
     debug:            "%kernel.debug%"
